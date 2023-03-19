@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Login - SGPC</mat-card-title>
+    <form (ngSubmit)="onLogin()" name="loginForm" [formGroup]="loginForm">
+      <div class="registration-input">
+        <mat-form-field appearance="outline">
+          <mat-label>Entre com a sua matrícula</mat-label>
+          <input matInput placeholder="Ex.: 20170146005" formControlName="registration">
+        </mat-form-field>
+      </div>
+      <div class="password-input">
+        <mat-form-field appearance="outline">
+          <mat-label>Entre com sua senha</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+        <button class="full-width full-height button-enter" type="submit" mat-raised-button color="primary">
+          Entrar
+        <mat-icon>forward</mat-icon>
+      </button>
+    </div>
+    </form>
+  </mat-card-content>
+</mat-card>
