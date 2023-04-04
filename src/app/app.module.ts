@@ -9,7 +9,6 @@ import { ThemeService } from './services/theme.service';
 import { StyleManagerService } from './services/style-manager.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeModule,
     LoginModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   providers: [ThemeService,StyleManagerService],
   bootstrap: [AppComponent]

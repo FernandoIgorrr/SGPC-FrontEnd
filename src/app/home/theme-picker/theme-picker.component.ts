@@ -3,11 +3,12 @@ import { ThemeService } from '../../services/theme.service';
 import { Option } from '../../models/option.model';
 
 @Component({
-  selector    : "app-menu",
-  templateUrl : "./menu.component.html",
-  styleUrls   : ["./menu.component.scss"]
+  selector: 'app-theme-picker',
+  templateUrl: './theme-picker.component.html',
+  styleUrls: ['./theme-picker.component.scss']
 })
-export class MenuComponent {
+export class ThemePickerComponent {
+
   @Input() options: Array<Option> | any;
   @Output() themeChange: EventEmitter<string> = new EventEmitter<string>();
 
