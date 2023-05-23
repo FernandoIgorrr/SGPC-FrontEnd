@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+import { ThemeService } from '../../services/theme.service';
+import { Option } from '../../models/option.model';
 
 @Component({
   selector    : 'app-home',
@@ -8,9 +13,26 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit{
 
-  constructor(private titleService: Title){}
+  menu_list : string[] = ['Patrimônios','Bolsistas','Informática','Atividades'];
 
-  ngOnInit(): void {
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+  options$: Observable<Array<Option>> = this.themeService.getThemeOptions();
+
+  constructor(private titleService: Title,
+    private breakpointObserver    : BreakpointObserver,
+    private readonly themeService : ThemeService
+  ){}
+
+  ngOnInit() {
     this.titleService.setTitle("Home");
+    this.themeService.setTheme("deeppurple-amber");
+  }
+
+  themeChangeHandler(themeToSet : any) {
+    this.themeService.setTheme(themeToSet);
   }
 }

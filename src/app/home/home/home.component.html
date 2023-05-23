@@ -1,1 +1,28 @@
-<app-main-nav></app-main-nav>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer class="sidenav">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a *ngFor="let element of menu_list" routerLink="{{element}}" mat-list-item>{{element}}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>SGPC-FrontEnd</span>
+      <span class="spacer"></span>
+      <app-theme-picker
+      [options]="options$ | async"
+      (themeChange)="themeChangeHandler($event)">
+      </app-theme-picker>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <app-menu-card></app-menu-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

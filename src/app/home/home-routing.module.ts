@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MenuCardComponent } from './menu-card/menu-card.component';
 
-const routes: Routes = [];
+const homeRoutes: Routes = [];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(homeRoutes)],
   exports: [RouterModule]
 })
 export class HomeRoutingModule { }
