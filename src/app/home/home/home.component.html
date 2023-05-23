@@ -3,7 +3,7 @@
     #drawer class="sidenav">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let element of menu_list" routerLink="{{element}}" mat-list-item>{{element}}</a>
+      <a *ngFor="let element of menu_list" routerLink="/{{element}}" mat-list-item>{{element}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
