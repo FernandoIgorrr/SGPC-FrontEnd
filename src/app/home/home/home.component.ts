@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { ThemeService } from '../../services/theme.service';
 import { Option } from '../../models/option.model';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector    : 'app-home',
@@ -22,7 +23,9 @@ export class HomeComponent implements OnInit{
     );
   options$: Observable<Array<Option>> = this.themeService.getThemeOptions();
 
-  constructor(private titleService: Title,
+  constructor(
+    private rout: ActivatedRoute,
+    private titleService: Title,
     private breakpointObserver    : BreakpointObserver,
     private readonly themeService : ThemeService
   ){}

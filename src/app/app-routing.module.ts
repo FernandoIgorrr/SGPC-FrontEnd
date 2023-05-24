@@ -8,7 +8,7 @@ import { MenuCardComponent } from './home/menu-card/menu-card.component';
 const routes: Routes = [
   { path  : ''    ,   component : HomeComponent},
   { path  : 'login',  component : LoginComponent},
-  { path  : 'home',   component : HomeComponent}
+  { path : 'patrimonios', component: PatrimoniosHomeComponent}
 ];
 
 @NgModule({

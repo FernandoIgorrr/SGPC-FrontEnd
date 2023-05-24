@@ -9,6 +9,8 @@ import { ThemeService } from './services/theme.service';
 import { StyleManagerService } from './services/style-manager.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
+import { PatrimoniosModule } from './patrimonios/patrimonios.module';
+import { PatrimoniosHomeComponent } from './patrimonios/patrimonios-home/patrimonios-home.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { LoginModule } from './login/login.module';
     BrowserAnimationsModule,
     HomeModule,
     LoginModule,
+    PatrimoniosModule,
     HttpClientModule,
   ],
   providers: [ThemeService,StyleManagerService],

@@ -19,7 +19,6 @@ import { MatListModule } from '@angular/material/list';
   declarations: [],
   imports: [
     CommonModule,
-    MatButtonModule,
   ],
   exports: [
     MatButtonModule,
@@ -27,6 +26,7 @@ import { MatListModule } from '@angular/material/list';
     MatMenuModule,
     MatToolbarModule,
     MatCardModule,
+    MatButtonModule,
     MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule,

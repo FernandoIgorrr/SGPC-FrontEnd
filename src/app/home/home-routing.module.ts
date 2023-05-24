@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuCardComponent } from './menu-card/menu-card.component';
+import { PatrimoniosHomeComponent } from '../patrimonios/patrimonios-home/patrimonios-home.component';
+import { HomeComponent } from './home/home.component';
 
-const homeRoutes: Routes = [];
+const homeRoutes: Routes = [
+  {path : "patrimonios", component: HomeComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(homeRoutes)],

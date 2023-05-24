@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [],
   imports: [
     CommonModule,
+  ],
+  exports: [
     FormsModule,
     ReactiveFormsModule,
   ]
