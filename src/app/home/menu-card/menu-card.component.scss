@@ -10,4 +10,9 @@ mat-card{
   mat-card-title{
     text-align: center;
   }
+  transition: all .3s ease;
+}
+mat-card:hover{
+    cursor: pointer;
+    scale: 1.1;
 }
