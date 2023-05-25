@@ -1,0 +1,18 @@
+#spacer-cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+mat-card{
+  margin: 4rem;
+  width : 15rem;
+  height: 15rem;
+  mat-card-title{
+    text-align: center;
+  }
+  transition: all .3s ease;
+}
+mat-card:hover{
+    cursor: pointer;
+    scale: 1.1;
+}

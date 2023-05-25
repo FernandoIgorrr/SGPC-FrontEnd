@@ -11,10 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { PatrimoniosModule } from './patrimonios/patrimonios.module';
 import { PatrimoniosHomeComponent } from './patrimonios/patrimonios-home/patrimonios-home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

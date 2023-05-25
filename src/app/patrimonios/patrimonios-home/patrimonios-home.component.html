@@ -1,1 +1,19 @@
-<p>patrimonios-home works!</p>
+<div id="spacer-cards">
+  <mat-card *ngFor="let element of menucard_patrimonios_list" >
+      <mat-card-header>
+          <mat-card-title>{{element}}</mat-card-title>
+          <mat-card-subtitle>Subtitle</mat-card-subtitle>
+      </mat-card-header>
+      <img matCardImage alt="{{element}} Icon" src="Card wide image source">
+      <mat-card-content>
+          Text content
+      </mat-card-content>
+      <mat-card-actions align="start">
+          <button [routerLinkActive]="'active'" mat-button>Action1</button>
+
+      </mat-card-actions>
+      <mat-card-footer>
+          Footer
+      </mat-card-footer>
+  </mat-card>
+</div>

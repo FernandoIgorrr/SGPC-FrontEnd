@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./patrimonios-home.component.scss']
 })
 export class PatrimoniosHomeComponent {
-
+  menucard_patrimonios_list: string[] = ['','','',''];
 }
