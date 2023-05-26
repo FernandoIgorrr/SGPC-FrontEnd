@@ -1,21 +1,18 @@
+#xxx{
+  width: 100%;
+  height: 100%;
+}
 .grid-center{
   display: grid;
   place-items: center;
 }
 
 mat-card{
-  max-width         : 400px;
-
-  //text-align        : center;
- // position          : absolute;
- // top               : 50%;
-  //left              : 50%;
-  //-webkit-transform : translate(-50%, -50%);
-  //transform         : translate(-50%, -50%);
+  max-width   : 400px;
+  text-align  : center;
 }
 
 mat-card mat-card-title{
-  //text-align: center;
   padding-top: 20px;
 }
 
