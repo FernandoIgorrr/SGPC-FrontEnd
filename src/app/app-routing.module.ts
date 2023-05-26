@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: ''    ,   component: HomeComponent,
    children: [
     {path: 'patrimonios', component: PatrimoniosHomeComponent},
-    {path: 'menu', component: MenuCardComponent}
+    {path: 'menu', component: MenuCardComponent},
+    {path: '', component: MenuCardComponent}
    ]
   },
   { path: 'login',  component: LoginComponent},

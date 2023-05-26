@@ -6,7 +6,8 @@ import { MenuCardComponent } from './menu-card/menu-card.component';
 
 const homeRoutes: Routes = [
   {path: 'patrimonios', component: PatrimoniosHomeComponent},
-  {path: 'menu', component: MenuCardComponent}
+  {path: 'menu', component: MenuCardComponent},
+  {path: '', component: MenuCardComponent}
 ];
 
 @NgModule({
