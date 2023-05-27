@@ -10,6 +10,13 @@ export class MenuCardComponent implements OnInit{
 
   menucard_list : string[] = ['Patrimônios','Bolsistas','Informática','Atividades'];
 
+  menucard = [
+    {titulo:'Patrimônios',           rota: 'patrimonios'},
+    {titulo:'Bolsistas',    rota: 'bolsistas'},
+    {titulo:'Informática',           rota: 'informatica'},
+    {titulo:'Atividades',  rota: 'atividades'}
+  ]
+
   constructor(private activatedRoute :ActivatedRoute){}
 
   ngOnInit(): void {

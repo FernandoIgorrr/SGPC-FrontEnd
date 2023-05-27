@@ -1,0 +1,9 @@
+<div id="spacer-cards">
+  <mat-card *ngFor="let element of menucard_patrimonio" routerLink = "{{element.rota}}">
+      <mat-card-header>
+        <div style="text-align:center;">
+          <mat-card-title>{{element.titulo}}</mat-card-title>
+        </div>
+      </mat-card-header>
+  </mat-card>
+</div>

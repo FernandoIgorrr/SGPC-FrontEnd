@@ -14,7 +14,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit{
 
-  menu_list : string[] = ['Patrimônios','Bolsistas','Informática','Atividades'];
+  menulist = [
+    {titulo:'Patrimônios',           rota: 'patrimonios'},
+    {titulo:'Bolsistas',    rota: 'bolsistas'},
+    {titulo:'Informática',           rota: 'informatica'},
+    {titulo:'Atividades',  rota: 'atividades'}
+  ]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

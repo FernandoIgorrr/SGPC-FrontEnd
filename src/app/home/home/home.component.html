@@ -3,7 +3,7 @@
     #drawer class="sidenav">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let element of menu_list" routerLink="/{{element}}" mat-list-item>{{element}}</a>
+      <a *ngFor="let element of menulist" routerLink="/{{element.rota}}" mat-list-item>{{element.titulo}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -15,7 +15,7 @@
         (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>SGPC-FrontEnd</span>
+      <span class="pointer" routerLink="/">SGPC-FrontEnd</span>
       <span class="spacer"></span>
       <app-theme-picker
       [options]="options$ | async"

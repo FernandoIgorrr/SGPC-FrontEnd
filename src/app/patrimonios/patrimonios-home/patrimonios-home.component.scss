@@ -9,9 +9,6 @@ mat-card{
   height: 15rem;
   transition: all .3s ease;
   align-items: center;
-  mat-card-title{
-    color:red;
-  }
 }
 mat-card:hover{
     cursor: pointer;

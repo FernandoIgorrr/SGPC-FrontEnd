@@ -1,10 +1,10 @@
 <div id="spacer-cards">
-  <mat-card *ngFor="let element of menucard_list" >
+  <mat-card *ngFor="let element of menucard" routerLink="{{element.rota}}">
       <mat-card-header>
-          <mat-card-title>{{element}}</mat-card-title>
+          <mat-card-title>{{element.titulo}}</mat-card-title>
           <mat-card-subtitle>Subtitle</mat-card-subtitle>
       </mat-card-header>
-      <img matCardImage alt="{{element}} Icon" src="Card wide image source">
+      <img matCardImage alt="{{element.titulo}} Icon" src="Card wide image source">
       <mat-card-content>
           Text content
       </mat-card-content>
