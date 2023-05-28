@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,9 +16,9 @@ export class MenuCardComponent implements OnInit{
     {titulo:'Atividades',  rota: 'atividades'}
   ]
 
-  constructor(private activatedRoute :ActivatedRoute){}
+  constructor(private titleService: Title){}
 
   ngOnInit(): void {
-
+    this.titleService.setTitle('SGPC - Home');
   }
 }
