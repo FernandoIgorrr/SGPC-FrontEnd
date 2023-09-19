@@ -1,1 +1,84 @@
-<p>patrimonios-lista-completa works!</p>
+<mat-table [dataSource]="patrimonioGeral">
+  <!-- Tombamento Column -->
+  <ng-container matColumnDef="tombamento">
+    <mat-header-cell *matHeaderCellDef>Tombamento</mat-header-cell>
+    <mat-cell *matCellDef="let patrimonioGeral">
+      {{ patrimonioGeral.tombamento }}
+    </mat-cell>
+  </ng-container>
+
+    <!-- Descricao Column -->
+
+  <ng-container matColumnDef="descricao">
+    <mat-header-cell *matHeaderCellDef>Descrição</mat-header-cell>
+    <mat-cell *matCellDef="let patrimonioGeral">
+      {{ patrimonioGeral.descricao }}
+    </mat-cell>
+  </ng-container>
+
+      <!-- Estado Column -->
+
+      <ng-container matColumnDef="estado">
+        <mat-header-cell *matHeaderCellDef>Estado</mat-header-cell>
+        <mat-cell *matCellDef="let patrimonioGeral">
+          {{ patrimonioGeral.estado }}
+        </mat-cell>
+      </ng-container>
+
+
+      <!-- Tipo Column -->
+
+      <ng-container matColumnDef="tipo">
+        <mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
+        <mat-cell *matCellDef="let patrimonioGeral">
+          {{ patrimonioGeral.tipo }}
+        </mat-cell>
+      </ng-container>
+
+
+
+      <!-- Comodo Column -->
+
+      <ng-container matColumnDef="comodo">
+        <mat-header-cell *matHeaderCellDef>Comodo</mat-header-cell>
+        <mat-cell *matCellDef="let patrimonioGeral">
+          {{ patrimonioGeral.comodo }}
+        </mat-cell>
+      </ng-container>
+
+
+        <!-- Andar Column -->
+
+        <ng-container matColumnDef="andar">
+          <mat-header-cell *matHeaderCellDef>Andar</mat-header-cell>
+          <mat-cell *matCellDef="let patrimonioGeral">
+            {{ patrimonioGeral.andar }}
+          </mat-cell>
+        </ng-container>
+
+
+      <!-- Prédio Column -->
+
+      <ng-container matColumnDef="predio">
+        <mat-header-cell *matHeaderCellDef>Prédio</mat-header-cell>
+        <mat-cell *matCellDef="let patrimonioGeral">
+          {{ patrimonioGeral.predio }}
+        </mat-cell>
+      </ng-container>
+
+
+
+      <!-- Complexo Column -->
+
+      <ng-container matColumnDef="complexo">
+        <mat-header-cell *matHeaderCellDef>Complexo</mat-header-cell>
+        <mat-cell *matCellDef="let patrimonioGeral">
+          {{ patrimonioGeral.complexo }}
+        </mat-cell>
+      </ng-container>
+
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
